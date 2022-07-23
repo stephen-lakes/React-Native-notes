@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  const [name, setName] = useState('steve');
-  const [person, setPerson] = useState({ name: 'uwem', age: 23 });
-
-  const clickHandler = () => {
-    setName('uwem');
-    setPerson({ name: 'dara', age: 24 });
-  };
-
   return (
     <View style={styles.container}>
-      <Text>My name is {name}</Text>
-      <Text>His name is {person.name} and his age is {person.age}</Text>
-      <View style={styles.buttonContainer}>
-        <Button title='update state' onPress={clickHandler} />  
+      <View style={styles.header}>
+        <Text style={styles.boldText}>Hello, World!</Text>
       </View>
+      <View style={styles.body}>
+        <Text>Some text not affected <Text style={styles.boldText}>"This is Affected"</Text> by parent styles.</Text>
+        <Text>Parent styles don't hold here.</Text>
+        <Text>Parent styles don't hold here.</Text>
+      </View>
+      
     </View>
   );
 }
@@ -28,7 +24,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  buttonContainer: {
-    marginTop: 20,
+  header: {
+    backgroundColor: 'pink',
+    padding: 20,
+  },
+  body: {
+    backgroundColor: 'yellow',
+    padding: 20,
+  },
+  boldText: {
+    fontWeight: 'bold',
   }
 });
