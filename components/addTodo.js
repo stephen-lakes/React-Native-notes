@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, TextInput, View } from 'react-native';
-import { Button } from 'react-native-web';
+import { Button, StyleSheet, Text, TouchableOpacity, TextInput, View } from 'react-native';
 
 export default function AddTodo({ submitHandler }) {
     const [text, setText] = useState('');
@@ -14,7 +13,7 @@ export default function AddTodo({ submitHandler }) {
             placeholder='new todo..'
             onChangeText={changeHandler} 
         />
-        <Button onPress={() => submitHandler(text)} title='add todo' color='coral' />
+        <Button onPress={() => submitHandler(text)} title='add todo' color='#f1356d' />
        </View>
     )
 
