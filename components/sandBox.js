@@ -1,44 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function Sandbox() {
     return (
         <View style={styles.container}>
-            <Text style={styles.boxOne}>one</Text>
-            <Text style={styles.boxTwo}>two</Text>
-            <Text style={styles.boxThree}>three</Text>
-            <Text style={styles.boxFour}>four</Text>
+            <Image style={styles.profilePic} source={require('../assets/profile-pic.png')} />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        //flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
+    container: {        
         paddingTop: 40,
-        alignItems: 'flex-end',
-        backgroundColor: '#bbb',
+        paddingBottom: 40,
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
-    boxOne: {
-        flex: 1,
-        backgroundColor: 'violet',
-        padding: 10,
-    },
-    boxTwo: {
-        flex: 2,
-        backgroundColor: 'gold',
-        padding: 20,
-    },
-    boxThree: {
-        flex: 1,
-        backgroundColor: 'coral',
-        padding: 30,
-    },
-    boxFour: {
-        flex: 3,
-        backgroundColor: 'skyblue',
-        padding: 40,
-    }    
+    profilePic: {
+        width: 300,
+        height: 300,
+        borderRadius: 100,
+    }   
 });
