@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, TextInput, View } from 'react-native';
 
 export default function AddTodo({ submitHandler }) {
