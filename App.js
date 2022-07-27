@@ -27,11 +27,10 @@ export default function App() {
         ]
       })
     }else {
-      console.log('todo must be greater than 3 chars');
+      Alert.alert('OOPS!', 'todso must be over 3 chars long',[
+        {text: 'Understood', onPress: () => console.log('alert closed')}
+      ])
     }
-
-    
-
   }
 
   return (
