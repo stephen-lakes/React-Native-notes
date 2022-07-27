@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, FlatList, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import AddTodo from './components/addTodo';
 import Header from './components/header';
+import Sandbox from './components/sandBox';
 import TodoItem from './components/todoItem';
 
 export default function App() {
@@ -34,26 +35,27 @@ export default function App() {
   }
 
   return (
-    <TouchableWithoutFeedback onPress={() => {
-      Keyboard.dismiss();
-      console.log('keyboard dismissed');
-    }}>
-      <View style={styles.container}>
-        <Header />
-        <View style={styles.content}>
-          {/* add todo form */}
-          <AddTodo submitHandler={submitHandler} />
-          <View style={styles.list}>
-            <FlatList
-              data={todos}
-              renderItem={({ item }) => (
-                <TodoItem item={item} pressHandler={pressHandler} />
-              )}
-            />
-          </View>
-        </View>
-      </View>
-    </TouchableWithoutFeedback>
+    <Sandbox />
+    // <TouchableWithoutFeedback onPress={() => {
+    //   Keyboard.dismiss();
+    //   console.log('keyboard dismissed');
+    // }}>
+    //   <View style={styles.container}>
+    //     <Header />
+    //     <View style={styles.content}>
+    //       {/* add todo form */}
+    //       <AddTodo submitHandler={submitHandler} />
+    //       <View style={styles.list}>
+    //         <FlatList
+    //           data={todos}
+    //           renderItem={({ item }) => (
+    //             <TodoItem item={item} pressHandler={pressHandler} />
+    //           )}
+    //         />
+    //       </View>
+    //     </View>
+    //   </View>
+    // </TouchableWithoutFeedback>
     
   );
 }
