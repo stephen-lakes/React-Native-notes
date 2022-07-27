@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, TextInput, View } from 'react-native';
-import { Button } from 'react-native-web';
+import { StyleSheet, Text, TouchableOpacity, TextInput, View, Button } from 'react-native';
 
 export default function AddTodo({ submitHandler }) {
     const [text, setText] = useState('');
