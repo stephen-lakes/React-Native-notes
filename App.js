@@ -18,12 +18,19 @@ export default function App() {
   }
 
   const submitHandler = (text) => {
-    setTodos((prevTodos) => {
-      return [
-        { text: text, key: Math.random().toString() },
-        ...prevTodos
-      ]
-    })    
+
+    if(text.length > 3) {
+      setTodos((prevTodos) => {
+        return [
+          { text: text, key: Math.random().toString() },
+          ...prevTodos
+        ]
+      })
+    }else {
+      console.log('todo must be greater than 3 chars');
+    }
+
+    
 
   }
 
