@@ -3,12 +3,11 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 import AddTodo from './components/addTodo';
 import Header from './components/header';
 import TodoItem from './components/todoItem';
-
 export default function App() {
   const [todos, setTodos] = useState([
     { text: 'buy coffee', key: '1' },
     { text: 'create an app', key: '2' },
-    { text: 'play on the switch', key: '3' }
+    { text: 'play on 2048 game', key: '3' }
   ]);
 
   const pressHandler = (key) => {
